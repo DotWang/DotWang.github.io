@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  The above 2 meta tags *must* come first in the <head>
+  to consistently ensure proper document rendering.
+  Any other head element should come *after* these tags.
+ -->
+<title>Di Wang</title>
+<!-- Set the base URL for all relative URLs within the document -->
+<base href="http://localhost:4000">
+
+<!--
+  Allows control over where resources are loaded from.
+  Place as early in the <head> as possible, as the tag  
+  only applies to resources that are declared after it.
+-->
+
+<!-- Short description of the document (limit to 150 characters) -->
+<!-- This content *may* be used as a part of search engine results. -->
+<meta name="description" content="a minimalistic jekyll theme based on dumbarton for academics">
+
+<!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="index,follow"><!-- All Search Engines -->
+<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+<!-- Verify website ownership -->
+<meta name="google-site-verification" content=""><!-- Google Search Console -->
+<meta name="yandex-verification" content=""><!-- Yandex Webmasters -->
+<meta name="msvalidate.01" content=""><!-- Bing Webmaster Center -->
+<meta name="alexaVerifyID" content=""><!-- Alexa Console -->
+<meta name="p:domain_verify" content=""><!-- Pinterest Console-->
+<meta name="norton-safeweb-site-verification" content=""><!-- Norton Safe Web -->
+
+<!-- Allows control over how referrer information is passed -->
+<meta name="referrer" content="no-referrer">
+
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=">
+
+<!-- Completely opt out of DNS prefetching by setting to "off" -->
+<meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- Geo tags -->
+<!-- meta name="ICBM" content="latitude, longitude"-->
+<!-- meta name="geo.position" content="latitude;longitude"-->
+<!-- meta name="geo.region" content="country[-state]"><Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
+<!-- meta name="geo.placename" content="city/town"><eg. content="New York City" -->
+
+<!-- Link to an external CSS file -->
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Courgette&family=Lobster&family=Pacifico&family=Yellowtail&family=Noto+Sans+JP:wght@400;900&family=Poppins:wght@500&family=Righteous&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css">
+<!-- BootStrap CDN --> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script src="https://kit.fontawesome.com/.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
+
+<!--  GIT TALK CDN  for comment system -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> 
+
+
+<!-- Provides information about an author or another person -->
+<link rel="me" href="mailto:">
+<link rel="me" href="sms:+">
+
+<!-- Open Search -->
+<!-- link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title" -->
+
+<!-- Feeds -->
+<!-- link rel="alternate" href="https://feeds.feedburner.com/example" type="application/rss+xml" title="RSS" -->
+<!-- link rel="alternate" href="https://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3" -->
+
+<!-- For IE 10 and below -->
+<!-- Place favicon.ico in the root directory - no tag necessary -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
+<link rel="mask-icon" href="/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+<meta property="fb:app_id" content="">
+<meta property="og:url" content="http://localhost:4000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Di Wang, a minimalistic jekyll theme based on dumbarton for academics">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="A minimalistic jekyll theme based on dumbarton for academic">
+<meta property="og:description" content="a minimalistic jekyll theme based on dumbarton for academics">
+<meta property="og:site_name" content="Di Wang">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Di Wang">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:url" content="http://localhost:4000">
+<meta name="twitter:title" content="a minimalistic jekyll theme based on dumbarton for academics">
+<meta name="twitter:description" content="a minimalistic jekyll theme based on dumbarton for academics">
+<meta name="twitter:image" content="">
+<meta name="twitter:image:alt" content="A minimalistic jekyll theme based on dumbarton for academic">
+
+<!-- Used for adding in-document CSS -->
+
+
+
+<!-- JavaScript & No-JavaScript tags -->
+
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/styles/monokai-sublime.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!--
+<script>
+    $(document).ready(function() {
+        $(".toast").toast('show');
+    });
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ');
+</script>
+
+<noscript>
+  <!-- No JS alternative -->
+</noscript>
+  <body style="background-color:;">
+    
+<nav class="navbar navbar-expand-lg glowing-border mb-4" style="font-family:sans-serif;background-color:#6600ff;">
+  <a class="navbar-brand" href="/index.html"><h4 style="font-family:sans-serif;font-weight:500;color:#ffffff;">Di Wang</h4></a>
+  <button class="navbar-toggler text-black" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class=""></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  </div>
+</nav>
+
+    <div class="dumbarton-spacer-sm"></div>
+    <div class="container">
+      
+
+<!-- ABOUT ME SECTION -->
+<div class="card mx-auto border-0" style="position:relative;background-color:;">
+  <div class="row">
+    <div class="col-md-4">
+      
+        <img src="/assets/img/Di_Wang.jpg" class="img-thumbnail float-left" alt="...">
+      
+    </div>
+    <!-- EDUCATION SECTION -->
+    <div class="col-md-8">
+      
+      <div class="card-body mt-0" style="color:;">
+      
+        <p style="color:;"><h2 id="di-wang">Di Wang</h2>
+
+<p><br /></p>
+
+<h4 id="phd-candidate">PhD Candidate</h4>
+
+<h4 id="school-of-computer-science-wuhan-university">School of Computer Science, Wuhan University</h4>
+
+<h5 id="email-wd74108520gmailcom-d_wangwhueducn">Email: <code class="language-plaintext highlighter-rouge">wd74108520@gmail.com</code>; <code class="language-plaintext highlighter-rouge">d_wang@whu.edu.cn</code></h5>
+
+<h5 id="google-scholar-github-researchgate-orcid">[<a href="https://scholar.google.com/citations?hl=en&amp;user=3fThjewAAAAJ" target="_blank">Google Scholar</a>] [<a href="https://github.com/DotWang" target="_blank">Github</a>] [<a href="https://www.researchgate.net/profile/Di-Wang-58" target="_blank">ResearchGate</a>] [<a href="https://orcid.org/0000-0001-6360-4360" target="_blank">ORCID</a>]</h5>
+
+<p><br /></p>
+
+<div style="font-size:20px">
+<li>Remote Sensing Foundation Model </li>
+
+<li>Hyperspectral Image Classification </li>
+
+<li>Aquaculture Pond Extraction </li>
+</div>
+<p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- style="font-family:sans-serif;background-color:#6600ff; -->
+
+<!-- HOME HIGHLIGHTS SECTION --> 
+
+<div class="card mx-auto mb-1 glowing-border"  style="max-width: 100%;">
+
+  <div class="card-header" style="background-color:#6600ff;">
+    <ul class="nav nav-tabs card-header-tabs" id="test-list" role="tablist">
+      
+        
+          <li class="nav-item">
+            <a class="nav-link shadow-none" id="" href="#experiences" role="tab" aria-controls="experiences" aria-selected="true" style="font-family:san serif;color:#ffffff;background-color:#6600ff"> Experiences</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+              <a class="nav-link" id="" href="#publications" role="tab" aria-controls="publications" aria-selected="true" style="font-family:san serif;color:#ffffff;background-color:#6600ff"> Publications</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+              <a class="nav-link" id="" href="#services" role="tab" aria-controls="services" aria-selected="true" style="font-family:san serif;color:#ffffff;background-color:#6600ff"> Services</a>
+          </li>
+        
+      
+        
+          <li class="nav-item">
+              <a class="nav-link" id="" href="#honors" role="tab" aria-controls="honors" aria-selected="true" style="font-family:san serif;color:#ffffff;background-color:#6600ff"> Honors</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+  <div class="card-body">          
+      <div class="tab-content mt-3">
+        
+          
+            
+              <div class="tab-pane active overflow-auto" id="experiences" role="tabpanel">
+                <p><A NAME="News"><h4>Activites</h4></A>
+<i>
+<ul>
+<li> <b> <font color="#FF0000">[2023.03]</font> </b> Took part in the 5th International Gaofen Challenge held in Xiamen, China. (<a href="http://sigma.whu.edu.cn/newspage.php?q=2023_03_24_01" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2023.03]</font> </b> Got the <b> 1st place </b> of the Alibaba Cloud Tianchi Long Term Competition of Surface Building Identification. (<a href="/assets/img/exp/tianchi_building.png" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2021.07]</font> </b> Took part in the 2021 IJCAI-SAIA Young Elite Symposium held in Shanghai, China. (<a href="/assets/img/exp/saia.jpg" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2019.12]</font> </b> Took part in the 2020 IEEE Data Fusion Contest. (<a href="http://www.classic.grss-ieee.org/community/technical-committees/data-fusion/2020-ieee-grss-data-fusion-contest/" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2019.11]</font> </b> Took part in the fisrt "Tianzhi Cup" AI Challenge held in Beijing, China. (<a href="/assets/img/exp/tzb.jpg" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2019.02]</font> </b> Took part in the 2019 IEEE Data Fusion Contest. (<a href="http://www.classic.grss-ieee.org/community/technical-committees/data-fusion/2019-ieee-grss-data-fusion-contest/" target="_blank">link</a>)</li>
+<li> <b> <font color="#FF0000">[2018.12]</font> </b> Took part in the Alibaba Cloud German AI Challenge 2018. (<a href="https://tianchi.aliyun.com/competition/entrance/231683/introduction" target="_blank">link</a>)</li>
+</ul>
+</i>
+<br />
+
+<A NAME="Experience"><h4> Occupation</h4></A>
+<table width="100%" class="imgtable">
+    <tr>
+        <td>
+            <p>
+            <b>[2021.12-Now] Research Intern </b>
+            <br> JD Explore Academy, Beijing, China
+        </p>
+        </td>
+        <td><img src="/assets/img/exp/jd.png" align="right" width="190" hspace="10"> </td>
+    </tr>
+</table>
+
+ 
+<A NAME="Experience"><h4> Education </h4></A>
+
+<br>
+
+<div style="line-height: 150%;"><img src="/assets/img/exp/whu.png" align="right" width="100" hspace="40">
+    <b>[2021.09-2024.06] PhD Candidate </b>
+    <br> Wuhan University, Wuhan, China
+    <br> School of Computer Science, Artificial Intelligence
+    <br> Supervised by Dr. Jing Zhang, Prof. Bo Du, Prof. Dacheng Tao, and Prof. Liangpei Zhang
+</div>
+
+<br>
+<br>
+
+<div style="line-height: 150%;"><img src="/assets/img/exp/whu.png" align="right" width="100" hspace="40">
+    <b>[2018.09-2020.06] Master of Engineering </b>
+    <br> Wuhan University, Wuhan, China
+    <br> State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing, Surveying and Mapping
+    <br> Supervised by AProf. Lei Shi, Prof. Bo Du and Prof. Liangpei Zhang
+</div>
+
+<br>
+<br>
+
+<div style="line-height: 150%;"><img src="/assets/img/exp/upc.svg" align="right" width="100" hspace="40">
+    <b>[2018.09-2020.06] Bachelor of Engineering </b>
+    <br> China University of Petroleum (East China), Qingdao, China
+    <br> School of Geosciences, Surveying and Mapping
+    <br> Supervised by AProf. Zhe Zeng
+</div>
+
+
+<!--
+<br>
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td>
+            <p>
+            <b>[2021.09-2024.06] PhD Candidate </b>
+            <br> Wuhan University, Wuhan, China
+            <br> School of Computer Science, Artificial Intelligence
+            <br> Supervised by Dr. Jing Zhang, Prof. Bo Du, Prof. Dacheng Tao, and Prof. Liangpei Zhang
+        </p>
+        </td>
+        <td><img src="/assets/img/exp/whu.png" width="100px" style="float: right;"> </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td>
+            <p>
+            <b>[2018.09-2020.06] Master of Engineering </b>
+            <br> Wuhan University, Wuhan, China
+            <br> State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing, Surveying and Mapping
+            <br> Supervised by AProf. Lei Shi, Prof. Bo Du and Prof. Liangpei Zhang
+        </p>
+        </td>
+        <td><img src="/assets/img/exp/whu.png" width="100px" style="float: right;"> </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td>
+            <p>
+            <b>[2018.09-2020.06] Bachelor of Engineering </b>
+            <br> China University of Petroleum (East China), Qingdao, China
+            <br> School of Geosciences, Surveying and Mapping
+            <br> Supervised by AProf. Zhe Zeng
+        </p>
+        </td>
+        <td><img src="/assets/img/exp/upc.svg" width="100px" style="float: right;"> </td>
+    </tr>
+</table>
+--></p>
+              </div>
+            
+          
+        
+          
+            
+              <div class="tab-pane overflow-auto" id="publications" role="tabpanel">
+                <p class="card-text"><h3>Journals</h3>
+
+<br>
+
+<h5>Remote Sensing Foundation Model</h5>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/rvsa.png" width="270px"></td>
+        <td>
+            Advancing Plain Vision Transformer Towards Remote Sensing Foundation Model
+            <br> <b>Di Wang</b>, Qiming Zhang, Yufei Xu, Jing Zhang, Bo Du, Dacheng Tao and Liangpei Zhang
+            <br><i>IEEE Transactions on Geoscience and Remote Sensing (<b><i>TGRS</i></b>)</i>, 2022.
+            <br>[<a href="https://ieeexplore.ieee.org/document/9956816">Paper</a>][<a href="https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA">Code</a>]
+            <br> News: 
+            [<a href="https://mp.weixin.qq.com/s/AXdc0tXlyxFG5mVT7iB5qQ">探索研究院1</a>]
+            [<a href="https://mp.weixin.qq.com/s/SewskD5hKVe6tcyFyCtLuQ">探索研究院2</a>]
+            [<a href="http://liesmars.whu.edu.cn/info/1056/7243.htm">测国重</a>]
+            [<a href="https://mp.weixin.qq.com/s/dGXPdC1H0s5cAbr_mf_Dvg">遥感院</a>]
+            [<a href="http://ai.whu.edu.cn/index.php?a=show&catid=4&id=86">AI研究院</a>]
+            [<a href="http://multimedia.whu.edu.cn/index.php?a=show&catid=4&id=233&lang=1">多媒体中心</a>]
+            [<a href="http://mmnce.whu.edu.cn/index.php?a=show&catid=4&id=161">多媒体实验室</a>]
+            [<a href="http://sigma.whu.edu.cn/newspage.php?q=2022_12_21_01">课题组</a>]
+            [<a href="https://mp.weixin.qq.com/s/cB_xRHr-oqOetTVc9rhGsA">慧天地</a>]
+            [<a href="https://www.taibo.cn/p/88566">泰伯网</a>]
+            [<a href="https://mp.weixin.qq.com/s/rdO3pPitTJY3MZutDW_TPg">CVer</a>]
+            [<a href="https://mp.weixin.qq.com/s/jfhkuPV-vlPXHxDh3RgBzA">52CV</a>]
+            [<a href="https://hub.baai.ac.cn/view/22333">智源</a>]
+            [<a href="https://www.cvmart.net/community/detail/6956">极市平台</a>]
+            [<a href="https://mp.weixin.qq.com/s/mF8My7Ut6lKazIbdh37jzQ">将门创投</a>]
+            [<a href="https://m.hbtv.com.cn/p/2388212.html">长江云</a>]
+            [<a href="https://www.163.com/dy/article/I0JB7TFS0530Q6HV.html">汉新闻</a>]
+            [<a href="https://m.toutiao.com/article/7213717612088738343/?app=news_article&timestamp=1679585644&use_new_style=1&req_id=202303232334038657975796B9E32983B3&group_id=7213717612088738343&wxshare_count=1&tt_from=weixin&utm_source=weixin&utm_medium=toutiao_android&utm_campaign=client_share&share_token=a929c0ca-a1cb-488c-bbd6-f7bc6de8e90d">湖北经视</a>]
+            [<a href="http://k.sina.com.cn/article_6054450374_168df94c602001huuu.html">广东广电</a>]
+            <br> The model has been included in <b><a href="https://github.com/WHULuoJiaTeam/luojianet"><font color="#FF0000">[LuojiaNet]</font></a></b>.
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/rsp.png" width="270px"></td>
+        <td>
+            An Empirical Study of Remote Sensing Pretraining
+            <br> <b>Di Wang</b>, Jing Zhang, Bo Du, Gui-Song Xia, and Dacheng Tao
+            <br><i>IEEE Transactions on Geoscience and Remote Sensing (<b><i>TGRS</i></b>)</i>, 2022.
+            <br>[<a href="https://ieeexplore.ieee.org/document/9782149">Paper</a>][<a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing">Code</a>][<a href="https://www.bilibili.com/video/BV1y5411979L/?spm_id_from=333.999.0.0">Talk</a>][<a href="https://mp.weixin.qq.com/s/-2PHJ4Iwi2sR2Iv5eaPZ2w">Slide</a>]
+            <br> News: 
+            [<a href="https://mp.weixin.qq.com/s/nkpwRv_P3NyhbcsIP5Qs_Q">探索研究院</a>]
+            [<a href="https://mp.weixin.qq.com/s/z6Nn-qatk4DnPQwzhLXHvA">将门创投</a>]
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<h5>Hyperspectral Image Classification</h5>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/fcont.png" width="270px"></td>
+        <td>
+            Fully Contextual Network for Hyperspectral Scene Parsing
+            <br> <b>Di Wang</b>, Bo Du and Liangpei Zhang</em>
+            <br><i>IEEE Transactions on Geoscience and Remote Sensing (<b><i>TGRS</i></b>)</i>, 2022.
+            <br>[<a href="https://ieeexplore.ieee.org/document/9347487">Paper</a>][<a href="https://github.com/DotWang/FullyContNet">Code</a>]
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/assmn.png" width="270px"></td>
+        <td>
+            Adaptive Spectral–Spatial Multiscale Contextual Feature Extraction for Hyperspectral Image Classification
+            <br> <b>Di Wang</b>, Bo Du, Liangpei Zhang and Yonghao Xu</em>
+            <br><i>IEEE Transactions on Geoscience and Remote Sensing (<b><i>TGRS</i></b>)</i>, 2021. (<b><font color="#FF0000">ESI Highly Cited Paper</font></b>) 
+            <br>[<a href="https://ieeexplore.ieee.org/document/9121743">Paper</a>][<a href="https://github.com/DotWang/ASSMN">Code</a>]
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/mshcn.png" width="270px"></td>
+        <td>
+            Hyperspectral image classification based on multi-scale information compensation
+            <br> <b>Di Wang</b>, Bo Du, Liangpei Zhang and Sheng Chu</em>
+            <br><i>Remote Sensing Letters (<b><i>RSL</i></b>)</i>, 2020.
+            <br>[<a href="https://www.tandfonline.com/doi/abs/10.1080/2150704X.2019.1711238">Paper</a>]
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<h5>Aquaculture Pond Extraction</h5>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/rs_fishpond.png" width="270px"></td>
+        <td>
+            RCSANet: A Full Convolutional Network for Extracting Inland Aquaculture Ponds from High-Spatial-Resolution Images
+            <br> Zhe Zeng, <b>Di Wang</b>, Wenxia Tan, Gongliang Yu, Jiacheng You, Botao Lv and Zhongheng Wu
+            <br><i>Remote Sensing (<b><i>RS</i></b>)</i>, 2020.
+            <br>[<a href="https://www.mdpi.com/2072-4292/13/1/92">Paper</a>]
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%" class="imgtable">
+    <tr>
+        <td width="300"> <img src="/assets/img/pub/jag_fishpond.png" width="270px"></td>
+        <td>
+            Extracting aquaculture ponds from natural water surfaces around inland lakes on medium resolution multispectral images
+            <br> Zhe Zeng, <b>Di Wang</b>, Wenxia Tan and Jianhua Huang
+            <br><i>International Journal of Applied Earth Observation and Geoinformation (<b><i>JAG</i></b>)</i>, 2019.
+            <br>[<a href="https://www.sciencedirect.com/science/article/abs/pii/S0303243418309620">Paper</a>]
+        </td>
+    </tr>
+</table>
+</p>
+              </div>
+            
+          
+        
+          
+            
+              <div class="tab-pane overflow-auto" id="services" role="tabpanel">
+                <p class="card-text"><h3> Membership </h3>
+
+<br> 
+
+<ul>
+<li>IEEE, Member</li>
+<li>IEEE Young Professionals </li>
+<li>IEEE Geoscience and Remote Sensing Society (GRSS), Student Member</li>
+<li>中国图象图形学学会，学生会员</li>
+<li>中国图象图形学学会遥感图像专业委员会，学生会员</li>
+</ul>
+
+<br>
+ 
+<h3>Reviewer<h3>
+
+<br> 
+
+<h5>Journal</h5>
+
+<ul>
+<i>
+<li>IEEE Transactions on Geoscience and Remote Sensing (<b>TGRS</b>)</li>
+<li>IEEE Transactions on Circuits and Systems for Video Technology (<b>TCSVT</b>) </li>
+<li>IEEE Transactions on Knowledge and Data Engineering (<b>TKDE</b>) </li>
+<li>IEEE Transactions on Cybernetics (<b>TCYB</b>) </li>
+<li>IEEE Geoscience and Remote Sensing Letters (<b>GRSL</b>)</li>
+</i>
+</ul>
+
+<br> 
+
+<h5>Conference</h5>
+
+<ul>
+<i>
+<li>Annual Conference on Neural Information Processing Systems (<b>NeurIPS</b>) </li>
+<li>International Joint Conference on Artificial Intelligence (<b>IJCAI</b>)</li>
+<li>ACM International Conference on Multimedia (<b>ACM MM</b>)</li>
+</i>
+</ul>
+</p>
+              </div>
+            
+          
+        
+          
+            
+              <div class="tab-pane overflow-auto" id="honors" role="tabpanel">
+                <p class="card-text"><h4> Awards </h4>
+
+<br> 
+
+<ul>
+<li>2015-2017: Second and Third-Class Academic Scholarship in China University of Petroleum (East China) </li>
+<li>2022: Second-Class Academic Scholarship for Graduate Student in Wuhan University </li>
+</ul>
+
+<br>
+ 
+<h4>Competitions</h4>
+
+<br> 
+
+<ul>
+<li>2023: The 5th International Gaofen Challenge, High Resolution SAR Image Coastal Aquaculture Pond Segmentation Track. Team: TNT, 1/129. (<b><a href="https://mp.weixin.qq.com/s/zJ2jOXa8rwIPGJ0vg2znDw"><font color="#FF0000">Champion!</font></a></b>)  </li>
+<li>2023: Alibaba Cloud Tianchi Long Term Competition of Surface Building Identification. Team: HJWSL丶, 1/3947. (up to now) </li>
+<li>2021: 2020 IEEE Data Fusion Contest. Team: jinitaimei, 23/159.
+<li>2020: 2019 IEEE Data Fusion Contest Track 1. Team: hjxl_dww, 10/176. (<b>Top 10%</b>) </li>
+<li>2019: Alibaba Cloud German AI Challenge 2018. Team: 广埠屯铁头娃, 50/1329. (<b>Top 5%</b>) </li>
+</ul>
+</p>
+              </div>
+            
+          
+        
+      </div>
+  </div>
+</div>
+
+<br>
+
+<div align='center'>
+<a href="http://s01.flagcounter.com/more/CNj"><img src="https://s01.flagcounter.com/count/CNj/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_20/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+</div>
+
+<!-- ANIMATE.JS ANIMATE LIBRARY
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+-->
+
+
+<!--JS FUNCTION FOR RECENT WORK SECTION -->
+<script>
+    $('#test-list a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+    })
+</script> 
+
+<!-- OPTIONAL TOAST JS FUNCTION-->
+<script>
+    $(document).ready(function() {
+        $(".toast").toast("show");
+    });
+</script>
+
+
+<script>
+$('body').scrollspy({ target: '#list-example' })
+</script>
+
+<script>
+$('.collapse').collapse()
+</script>
+
+<script>
+$('.show').show()
+</script>
+
+    </div>
+    <div class="dumbarton-spacer"></div>
+    <div id="copyright">
+  <p align="center" style="font-size:smaller;">
+  ©2023 Di Wang. Hosted by
+      <a href="https://pages.github.com" target="_blank" >Github Pages</a>
+  </p> 
+</div>
+
+
+<script>
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
+</script>
+  </body>
+</html>

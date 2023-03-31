@@ -1,0 +1,80 @@
+# =======================================#
+# -----------DUMBARTON THEME-------------#
+# ----------------By: Tyler Butler-------#
+#-----------------https://tbutler.org----#
+#========================================#
+
+# =======================================#
+# -----------BASE SETTINGS---------------#
+#========================================#
+
+title: Di Wang 
+email: 
+description: a minimalistic jekyll theme based on dumbarton for academics
+baseurl:                                       # the subpath of your site, e.g. /blog
+url: "https://dwbricker.com/"          # the base hostname & protocol for your site, e.g. http://example.com
+image:             # used to generate site link preview
+image_alt: A minimalistic jekyll theme based on dumbarton for academic    # image description
+
+# =======================================#
+# -----------SITE SETTINGS---------------#
+#========================================#:
+author: Di Wang
+profile_image: /assets/img/Di_Wang.jpg  #/assets/img/avatar/avatar.jpeg 
+
+#========================================#
+# --------- UI THEMES -------------------#
+#========================================#
+ui_theme: diwang                                 # Create your own theme by setting options in _data/themes.yml
+
+
+# =======================================#
+# -----------BLOG SETTINGS---------------#
+#========================================#
+
+tags:  post jekyll styleguide ipsum
+twitter-widget: false # true,false                  # Used to show your twitter timeline on blog home page
+
+comments: false                                     # Used to enable comments on blog posts
+gitalk_client_id:             
+gitalk_client_secret:    
+gitalk_repo:
+gitalk_owner: 
+gitalk_admin: 
+gitalk_distraction_mode: false
+
+
+animate: false                                        # false or true, uses animate.css to animate certain functions
+
+# =======================================#
+# -----------BUILD SETTINGS--------------#
+#========================================#
+theme: 
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-scholar
+  - jekyll-environment-variables
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+include:
+  - _posts
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/                                          # Facebook OpenGraph 
