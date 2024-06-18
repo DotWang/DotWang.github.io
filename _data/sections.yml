@@ -19,6 +19,12 @@
 - name: Honors
   id: honors
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  content: pub.html
+  first: false
+
+- name: Co-Authors
+  id: co-authors
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   content: 
   first: false
 
