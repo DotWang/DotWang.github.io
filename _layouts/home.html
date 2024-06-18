@@ -78,6 +78,10 @@ layout: default
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
                 <p class="card-text">{% include honor.html %}</p>
               </div>
+            {% elsif section.name == "Co-Authors" %}
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
+                <p class="card-text">{% include friendlink.html %}</p>
+              </div>
             {% else %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
